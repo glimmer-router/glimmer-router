@@ -46,7 +46,7 @@ const moduleConfiguration = {
   }
 };
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'bodega-glimmer',
     environment: environment,

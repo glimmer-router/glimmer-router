@@ -4,35 +4,34 @@ import Service from './-utils/service';
 import { Match } from '../utils/interfaces';
 
 export default class Router extends Service {
-    history = createBrowserHistory();
+  history = createBrowserHistory();
 
-    unlisten: Function;
+  unlisten: Function;
 
-    @tracked match: match;
+  @tracked match: Match;
 
+  @tracked route: any = {
+    location: this.history.location,
+    match: this.match
+  };
 
-    @tracked route: any = {
-        location: this.history.location,
-        match: this.match
+  computeMatch(pathname: string): Match {
+    return {
+      path: '/',
+      url: '/',
+      params: {},
+      isExact: pathname === '/'
     };
+  }
 
-    computeMatch(pathname: string): match {
-        return {
-            path: '/',
-            url: '/',
-            params: {},
-            isExact: pathname === '/'
-        };
-    }
+  constructor(options: any) {
+    super(options);
 
-    constructor(options: any) {
-        super(options);
+    this.history = createBrowserHistory();
 
-        this.history = createBrowserHistory();
-
-        this.unlisten = this.history.listen(() => {
-            this.match = this.computeMatch(this.history.location.pathname);
-            this.notify();
-        });
-    }
+    this.unlisten = this.history.listen(() => {
+      this.match = this.computeMatch(this.history.location.pathname);
+      this.notify();
+    });
+  }
 }
