@@ -1,7 +1,7 @@
 import { createBrowserHistory } from 'history';
 import { tracked } from '@glimmer/component';
 import Service from './-utils/service';
-import { match } from '../utils/interfaces';
+import { Match } from '../utils/interfaces';
 
 export default class Router extends Service {
     history = createBrowserHistory();
