@@ -26,10 +26,17 @@
     "ember-cli-sass": "^6.2.0",
     "ember-cli-uglify": "^2.0.0-beta.1",
     "qunitjs": "^2.3.3",
+    "rollup-plugin-commonjs": "^8.2.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
     "typescript": "^2.2.2"
   },
   "engines": {
     "node": ">= 4.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "path-to-regexp": "^2.0.0"
+  }
 }

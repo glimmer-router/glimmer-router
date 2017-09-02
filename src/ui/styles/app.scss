@@ -1,3 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #f4f7f6;
+  color: #565656;
+}
+
+h1, h2 {
+  color: #76323f;
+}
+
 h1 {
-  color: #444;
+  margin: 0 0 1em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sidebar {
+  flex: 0 0 150px;
+  border: 1px solid currentColor;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.content {
+  flex: 1 1 100%;
+  padding: 20px;
 }

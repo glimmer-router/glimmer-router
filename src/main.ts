@@ -7,7 +7,7 @@ export default class App extends Application {
   constructor() {
     let moduleRegistry = new BasicModuleRegistry(moduleMap);
     let resolver = new Resolver(resolverConfiguration, moduleRegistry);
-
+    
     super({
       rootName: resolverConfiguration.app.rootName,
       resolver
