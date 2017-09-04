@@ -64,7 +64,7 @@ The benefit of having a component like `<g-route>` that can render content based
 
 ### Things to be aware of
 
-Because Glimmer components require a root element to work right now, every `<g-route>` component will render a wrapping `div` around its content. This can lead to some potential styling issues, but nothing that's not can't be solved.
+Because Glimmer components require a root element to work right now, every `<g-route>` component will render a wrapping `div` around its content.
 
 # Contributing
 
