@@ -1,11 +1,11 @@
 import Component from '@glimmer/component';
-import trackService from '../../../utils/tracked';
+import injectService from '../../../utils/tracked';
 import Router from '../../../services/router';
 
 const isModifiedEvent = (event: MouseEvent) =>
 !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
 
-@trackService('router')
+@injectService('router')
 export default class LinkTo extends Component {
     router: Router;
 

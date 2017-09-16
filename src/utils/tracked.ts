@@ -11,7 +11,7 @@ function dashCase(str) {
   });
 }
 
-export default function trackService(propertyWithService): any {
+export default function injectService(propertyWithService): any {
   return (baseConstructor) => {
     let propertyCache = Symbol('property-cache');
 

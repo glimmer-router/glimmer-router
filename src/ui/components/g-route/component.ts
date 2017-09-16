@@ -1,8 +1,8 @@
 import Component, { tracked } from '@glimmer/component';
-import trackService from '../../../utils/tracked';
+import injectService from '../../../utils/tracked';
 import Router from '../../../services/router';
 
-@trackService('router')
+@injectService('router')
 export default class GRoute extends Component {
   router: Router;
 
