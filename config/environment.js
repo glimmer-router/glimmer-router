@@ -48,7 +48,7 @@ const moduleConfiguration = {
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'bodega-glimmer',
+    modulePrefix: 'glimmer-router',
     environment: environment,
     locationType: 'auto',
     /*
