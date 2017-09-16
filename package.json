@@ -1,7 +1,7 @@
 {
   "name": "glimmer-router",
   "version": "0.0.0",
-  "description": "A brand new Glimmer app.",
+  "description": "A declarative router for Glimmer.js",
   "directories": {
     "doc": "doc",
     "test": "tests"
