@@ -8,6 +8,6 @@ module('Component: link-to', function(hooks) {
 
   test('it renders', async function(assert) {
     await this.render(hbs`<link-to />`);
-    assert.ok(this.containerElement.querySelector('div'));
+    assert.ok(this.containerElement.querySelector('a'));
   });
 });

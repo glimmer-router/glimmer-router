@@ -8,6 +8,8 @@ module('Component: glimmer-router', function(hooks) {
 
   test('it renders', async function(assert) {
     await this.render(hbs`<glimmer-router />`);
-    assert.equal(this.containerElement.textContent, 'Welcome to Glimmer!\n');
+    const content = this.containerElement.textContent;
+    assert.ok(content.includes('Home'));
+    assert.ok(this.containerElement.querySelector('.container'));
   });
 });
