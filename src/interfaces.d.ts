@@ -1,4 +1,4 @@
-export interface Match {
+interface Match {
   path: string,
   url: string,
   params: any,

@@ -1,5 +1,4 @@
 import Component, { tracked } from '@glimmer/component';
-import { Match } from '../../../utils/interfaces';
 import trackService from '../../../utils/tracked';
 import Router from '../../../services/router';
 
