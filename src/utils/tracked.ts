@@ -6,7 +6,7 @@ export const REGISTER_TRACKING = Symbol('register-component');
  * Lifted from https://github.com/shahata/dasherize/blob/master/index.js
  */
 function dashCase(str) {
-  return str.replace(/[A-Z](?:(?=[^A-Z])|[A-Z]*(?=[A-Z][^A-Z]|$))/g, function (s, i) {
+  return str.replace(/[A-Z](?:(?=[^A-Z])|[A-Z]*(?=[A-Z][^A-Z]|$))/g, function(s, i) {
     return (i > 0 ? '-' : '') + s.toLowerCase();
   });
 }
