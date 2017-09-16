@@ -21,7 +21,7 @@ module('Component: g-route', function(hooks) {
     assert.notEqual(this.containerElement.textContent, text);
   });
 
-  test('renders content if', async function(assert) {
+  test('renders content if route matches', async function(assert) {
     const content = 'Test';
     await this.render(hbs`<g-route @path="/test">
                             <h1>{{content}}</h1>
