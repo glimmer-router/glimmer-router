@@ -1,5 +1,5 @@
 import Component, { tracked } from '@glimmer/component';
-import injectService from '../../../utils/tracked';
+import injectService from '../../../utils/injectService';
 import Router from '../../../services/router';
 
 @injectService('router')
@@ -22,7 +22,7 @@ export default class GRoute extends Component {
     return null;
   }
 
-  @tracked('router')
+  @tracked('router', 'args')
   get isActive() {
     const match = this.computeMatch(this.args.path, this.router.history);
 

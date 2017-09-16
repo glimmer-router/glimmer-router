@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import injectService from '../../../utils/tracked';
+import injectService from '../../../utils/injectService';
 import Router from '../../../services/router';
 
 const isModifiedEvent = (event: MouseEvent) =>

@@ -1,4 +1,4 @@
-import { REGISTER_TRACKING } from '../../utils/tracked';
+import { REGISTER_TRACKING } from '../../utils/injectService';
 
 export default class Service {
 
