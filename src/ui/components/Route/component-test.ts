@@ -3,29 +3,27 @@ import hbs from '@glimmer/inline-precompile';
 
 const { module, test } = QUnit;
 
-module('Component: g-route', function(hooks) {
-  hooks.beforeEach(function() {
-    console.log('I should run before each');
-  });
-
+module('Component: Route', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await this.render(hbs`<g-route />`);
-    assert.ok(this.containerElement.querySelector('div'));
+    await this.render(hbs`<Route />`);
+    assert.equal(this.containerElement.textContent, '');
   });
 
   test('does not render when it does not match', async function(assert) {
-    const text = 'No match';
-    await this.render(hbs`<g-route @path="/no-match">{{text}}</g-route>`);
-    assert.notEqual(this.containerElement.textContent, text);
+    await this.render(hbs`<Route @path="/no-match" />`);
+    assert.equal(this.containerElement.textContent, '');
   });
 
   test('renders content if route matches', async function(assert) {
     const content = 'Test';
-    await this.render(hbs`<g-route @path="/test">
+    this.location = {
+      pathname: '/test';
+    };
+    await this.render(hbs`<Route @path="/test" @location={{location}}>
                             <h1>{{content}}</h1>
-                          </g-route>`);
+                          </Route>`);
     assert.equal(this.containerElement.querySelector('h1'), content);
   });
 });

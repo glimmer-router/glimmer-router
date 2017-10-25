@@ -6,7 +6,7 @@ const isModifiedEvent = (event: MouseEvent) =>
   !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
 
 @injectService('router')
-export default class LinkTo extends Component {
+export default class Link extends Component {
   router: Router;
 
   handleClick(event: MouseEvent): void {
@@ -24,7 +24,7 @@ export default class LinkTo extends Component {
 
       const { push } = this.router.history;
 
-      push(this.args.path);
+      push(this.args.to);
     }
   }
 };
