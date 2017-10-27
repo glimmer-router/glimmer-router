@@ -9,9 +9,9 @@ By using the `<g-route>` component, we can declare what we want to render when t
 ```hbs
 <div class="application">
   <h1>I will always render</h1>
-  <g-route @path="/subroute">
+  <R @path="/subroute">
     <p>I will render when the path is "/subroute"</p>
-  </g-route>
+  </Route>
 </div>
 ```
 
@@ -29,9 +29,9 @@ interface Match {
 This allows you to pass information about the rendered route into sub content or child components:
 
 ```handlebars
-<g-route @path="/user/:user_id" as |match|>
+<Route @path="/user/:user_id" as |match|>
   <user-info @userId={{match.params.user_id}} />
-<g-route>
+<Route>
 ```
 
 The benefit of having a component like `<g-route>` that can render content based on the URL, is that you can render content in different locations based on the same URL. This comes in handy when you want to render some route-specific content in ie. a sidebar: 
@@ -48,16 +48,16 @@ The benefit of having a component like `<g-route>` that can render content based
       </li>
     </ul>
 
-    <g-route @path="/hello" as |match|>
+    <Route @path="/hello" as |match|>
       {{match.url}} also render content in the sidebar!
-    </g-route>
+    </Route>
   </nav>
 
   <section class="content">
-    <g-route @path="/hello" as |match|>
+    <Route @path="/hello" as |match|>
       <h1>Hello!</h1>
       <div>I am the content of the route matching '{{match.url}}'</div>
-    </g-route>
+    </Route>
   </section>
 </div>
 ```
