@@ -17,7 +17,7 @@ By using the `<g-route>` component, we can declare what we want to render when t
 </div>
 ```
 
-In addition to this, the `<g-route>` component yields a `Match` object:
+In addition to this, the `<Route>` component yields a `Match` object:
 
 ```ts
 interface Match {
