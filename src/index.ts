@@ -14,6 +14,6 @@ app.registerInitializer({
   }
 });
 
-app.renderComponent('glimmer-router', containerElement, null);
+app.renderComponent('GlimmerRouter', containerElement, null);
 
 app.boot();

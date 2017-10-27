@@ -2,33 +2,33 @@
   <nav class="sidebar">
     <ul>
       <li>
-        <link-to @path="/">Home</link-to>
+        <Link @to="/">Home</Link>
       </li>
       <li>
-        <link-to @path="/hello">Hello</link-to>
+        <Link @to="/hello">Hello</Link>
       </li>
       <li>
-        <link-to @path="/goodbye">Goodbye</link-to>
+        <Link @to="/goodbye">Goodbye</Link>
       </li>
     </ul>
-    <g-route @path="/hello" as |match|>
+    <Route @path="/hello" as |match|>
       {{match.url}} also render content in the sidebar!
-    </g-route>
+    </Route>
   </nav>
 
   <section class="content">
-    <g-route @path="/" class="route" as |match|>
+    <Route @path="/" class="route" as |match|>
       <h1>Welcome to glimmer-router!</h1>
       <div>I am the content of the route matching '{{match.url}}'</div>
-    </g-route>
+    </Route>
 
-    <g-route @path="/hello" as |match|>
+    <Route @path="/hello" as |match|>
       <h1>Hello!</h1>
       <div>I am the content of the route matching '{{match.url}}'</div>
-    </g-route>
+    </Route>
 
-    <g-route @path="/goodbye" as |match|>
+    <Route @path="/goodbye" as |match|>
       <h1>Goodbye <small>{{match.url}}</small></h1>
-    </g-route>
+    </Route>
   </section>
 </div>

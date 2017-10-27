@@ -3,13 +3,13 @@ import injectService from '../../../utils/injectService';
 import Router from '../../../services/router';
 
 @injectService('router')
-export default class GRoute extends Component {
+export default class Route extends Component {
   router: Router;
 
   @tracked match: Match;
 
   computeMatch(path: string, history: any): Match {
-    const { location: { pathname } } = history;
+    const { pathname } = history;
 
     if (path === pathname) {
       return {
@@ -24,7 +24,9 @@ export default class GRoute extends Component {
 
   @tracked('router', 'args')
   get isActive() {
-    const match = this.computeMatch(this.args.path, this.router.history);
+    const history = this.args.location || this.router.history.location;
+    console.log(history);
+    const match = this.computeMatch(this.args.path, history);
 
     if (match != null) {
       this.match = match;
