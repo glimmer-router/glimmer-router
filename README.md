@@ -31,8 +31,8 @@ interface Match {
 This allows you to pass information about the rendered route into sub content or child components:
 
 ```handlebars
-<Route @path="/user/:user_id" as |match|>
-  <user-info @userId={{match.params.user_id}} />
+<Route @path="/user" as |match|>
+  <user-info @userId={{match.url}} />
 <Route>
 ```
 
@@ -64,9 +64,17 @@ The benefit of having a component like `<g-route>` that can render content based
 </div>
 ```
 
-### Things to be aware of
+# Next steps
 
-Because Glimmer components require a root element to work right now, every `<g-route>` component will render a wrapping `div` around its content.
+This repo's [issues](https://github.com/glimmer-router/glimmer-router/issues) is more or less updated with what needs to be done.
+
+The main thing that needs to be solved right now is how do handle dynamic segments/route-params. This will allow you to pass that data to the child components:
+
+```handlebars
+<Route @path="/user/:user_id" as |match|>
+  <user-info @userId={{match.params.user_id}} />
+<Route>
+```
 
 # Contributing
 
