@@ -1,3 +1,5 @@
+## This is not an official Glimmer.js repo, it's the work of [jkarsrud](https://github.com/jkarsrud)
+
 # glimmer-router
 
 `glimmer-router` is a declarative router for Glimmer.js, heavily inspired by `react-router`. The philosophy is explained so well in [React Router's documentation](https://reacttraining.com/react-router/core/guides/philosophy) that I don't see why I should need to re-write everything here. If you're interested, head on over there!
